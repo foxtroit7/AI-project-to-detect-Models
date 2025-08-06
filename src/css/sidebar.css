@@ -1,0 +1,147 @@
+.sidebar-container {
+  width: 230px;
+  height: 100vh;
+  padding: 10px 10px 20px 10px;
+  transition: width 0.3s;
+  overflow: hidden;
+  background: #2f3136;
+  color: white;
+   border: 1px #404040;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow:  0px 4px 8px rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.sidebar-container.collapsed {
+  width: 60px;
+  border-radius: 0;
+}
+
+.collapse-btn {
+  display: block;
+  color: white;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.sidebar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 10px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+
+
+.company-icon {
+  font-size: 30px;
+color: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.company-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  white-space: nowrap;
+}
+
+
+
+.company-icon {
+  font-size: 28px;
+  margin-bottom: 5px;
+  background-color: #60a5fa;
+}
+
+.company-name {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.sidebar-date {
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-title-link {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  font-weight: bold;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: white;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.sidebar-title-link:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+.sidebar-title-link.centered {
+  justify-content: center;
+}
+
+.title-letter {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+.link-label {
+  margin-left: 12px;
+  font-size: 14px;
+}
+
+.sidebar-title-link.active {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+}
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  padding: 12px 0 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.user-icon {
+  font-size: 30px;
+  background-color: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+}
+
+.user-greeting {
+  font-weight: 500;
+  color: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
+   font-size: 17px;
+}
+

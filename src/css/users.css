@@ -1,0 +1,481 @@
+/* Enhanced Users CSS - Keeping Your Original Colors */
+
+.user-page-bg {   
+  min-height: 100vh;   
+  background-color: #36393f;   
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px 0;
+}
+
+/* Enhanced Table Container */
+.table-container {
+  background: rgba(255, 255, 255, 0.02);
+  padding: 20px;
+}
+
+/* Table Styling - Enhanced */
+.user-table {   
+  width: 100%;   
+  border-collapse: separate !important;   
+  border-spacing: 0 12px;
+  border-radius: 12px;   
+  background-color: transparent; 
+}
+
+
+.user-table th {   
+  padding: 16px 20px;   
+  background-color: #2c2c2c;   
+  text-align: left;   
+  font-weight: bold;  
+  color: #dcddde;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.user-table th:hover {
+  background-color: #363636;
+  transform: translateY(-1px);
+}
+
+
+
+.user-table td {   
+  padding: 18px 20px;   
+  background-color: white;   
+  border: none !important;   
+  vertical-align: middle;   
+  color: #dcddde;   
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+/* Enhanced hover effects for rows */
+.user-table tbody tr {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.user-table tbody tr:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+}
+
+
+
+/* Zebra striping - keeping your colors */
+.user-table tbody tr:nth-child(odd) td {   
+  background-color: #363636; 
+}
+
+.user-table tbody tr:nth-child(even) td {   
+  background-color: #2c2c2c; 
+}
+
+/* Rounded corners for rows */
+.user-table tbody tr td:first-child {   
+  border-top-left-radius: 12px;   
+  border-bottom-left-radius: 12px; 
+}
+
+.user-table tbody tr td:last-child {   
+  border-top-right-radius: 12px;   
+  border-bottom-right-radius: 12px; 
+}
+
+/* Enhanced background gradient - keeping your colors */
+.bg-color {      
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8); 
+}
+
+/* Enhanced Initials Circle */
+.initial-circle {   
+  width: 42px;   
+  height: 42px;   
+  border-radius: 50%;   
+  color: white;   
+  font-weight: 600;   
+  font-size: 1rem;   
+  display: flex;   
+  align-items: center;   
+  justify-content: center;   
+  background: #3b82f6;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.initial-circle::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left 0.5s;
+}
+
+.initial-circle:hover::before {
+  left: 100%;
+}
+
+.initial-circle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced lock icon */
+.lock-icon {   
+  color: #3b82f6;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(29, 78, 216, 0.3));
+}
+
+.lock-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Enhanced text size */
+.text-size {     
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Enhanced Add User Button */
+.add-user-btn {   
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);   
+  border: none;   
+  color: white;   
+  border-radius: 12px;   
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);   
+  box-shadow: 0 4px 15px rgba(30, 64, 175, 0.3);
+  padding: 10px 20px;
+  font-weight: 600;
+  position: relative;
+  overflow: hidden;
+}
+
+.add-user-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.add-user-btn:hover::before {
+  left: 100%;
+}
+
+.add-user-btn:hover {   
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(30, 64, 175, 0.4);
+}
+
+.add-user-btn:active {
+  transform: translateY(0);
+}
+
+/* Enhanced Action Buttons */
+.action-btn {   
+  border-radius: 10px;   
+  width: 38px;   
+  height: 38px;   
+  display: inline-flex;   
+  align-items: center;   
+  justify-content: center;   
+  background-color: #f1f5f9;   
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);   
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.action-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+  transition: left 0.4s;
+}
+
+.action-btn:hover::before {
+  left: 100%;
+}
+
+.action-btn:hover {   
+  background-color: #dbeafe;   
+  color: #1d4ed8;
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.action-btn:active {
+  transform: translateY(0) scale(1);
+}
+
+/* Search and Filter Enhancements */
+.form-control {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #dcddde !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease !important;
+}
+
+.form-control:focus {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+  color: #f0f0f0 !important;
+}
+
+.form-control::placeholder {
+  color: rgba(220, 221, 222, 0.6) !important;
+}
+.camera-scroll {
+  max-width: 80px;
+  white-space: nowrap;
+  overflow-x: auto;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.camera-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+
+
+.form-select {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #dcddde !important;
+  border-radius: 10px !important;
+  transition: all 0.3s ease !important;
+}
+
+.form-select:focus {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1) !important;
+  color: #f0f0f0 !important;
+}
+
+.input-group-text {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #dcddde !important;
+  border-radius: 10px 0 0 10px !important;
+}
+
+/* Badge Enhancements */
+.badge {
+  padding: 6px 12px !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  font-size: 0.75rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.badge:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Alert Enhancements */
+.alert {
+  border-radius: 12px !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.alert-success {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.9), rgba(21, 128, 61, 0.9)) !important;
+  color: white !important;
+}
+
+.alert-danger {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.9), rgba(185, 28, 28, 0.9)) !important;
+  color: white !important;
+}
+
+/* Modal Enhancements */
+.modal-content {
+  background: linear-gradient(135deg, #2a2a3a, #363649) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5) !important;
+  backdrop-filter: blur(20px) !important;
+}
+
+.modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(29, 78, 216, 0.1)) !important;
+  border-radius: 16px 16px 0 0 !important;
+}
+
+.modal-title {
+  color: #e2e8f0 !important;
+  font-weight: 600 !important;
+}
+
+.modal-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+  background: rgba(255, 255, 255, 0.02) !important;
+  border-radius: 0 0 16px 16px !important;
+}
+
+.form-label {
+  color: #cbd5e1 !important;
+  font-weight: 500 !important;
+  font-size: 0.875rem !important;
+  margin-bottom: 6px !important;
+}
+
+/* Dropdown Enhancements */
+.dropdown-menu {
+  background-color: #2c2c2c !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 10px !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
+.dropdown-item {
+  color: #dcddde !important;
+  transition: all 0.3s ease !important;
+  border-radius: 6px !important;
+  margin: 2px 4px !important;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(59, 130, 246, 0.1) !important;
+  color: #3b82f6 !important;
+  transform: translateX(4px);
+}
+
+.dropdown-item.text-danger:hover {
+  background-color: rgba(239, 68, 68, 0.1) !important;
+  color: #ef4444 !important;
+}
+
+/* Password field hover effect */
+.password-field {
+  transition: all 0.3s ease;
+  border-radius: 6px;
+  padding: 4px 8px;
+  margin: -4px -8px;
+}
+
+.password-field:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+  box-shadow: inset 0 0 0 1px rgba(59, 130, 246, 0.2);
+}
+
+/* Empty state styling */
+.text-center.py-5 {
+  color: #94a3b8 !important;
+}
+
+/* Loading spinner */
+.spinner-border-sm {
+  color: #3b82f6 !important;
+}
+
+/* Table sort icons */
+.opacity-50 {
+  opacity: 0.5 !important;
+  transition: opacity 0.3s ease !important;
+}
+
+.user-table th:hover .opacity-50 {
+  opacity: 0.8 !important;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .user-table th,
+  .user-table td {
+    padding: 12px 14px;
+    font-size: 0.875rem;
+  }
+  
+  .initial-circle {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+  
+  .action-btn {
+    width: 34px;
+    height: 34px;
+  }
+  
+  .add-user-btn {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+  }
+  
+  .text-size {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .user-table {
+    font-size: 0.8rem;
+  }
+  
+  .user-table th,
+  .user-table td {
+    padding: 8px 10px;
+  }
+  
+  .initial-circle {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+  }
+  
+  .action-btn {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+/* Smooth scrolling for table */
+.table-responsive {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #2c2c2c;
+}
+
+.table-responsive::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+  background: #2c2c2c;
+  border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 4px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}

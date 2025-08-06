@@ -1,0 +1,118 @@
+/* Background for camera page */
+.camera-page-bg {
+  min-height: 100vh;
+  background-color: #f1f5f9;
+  padding: 20px;
+}
+
+/* Table Styling */
+.camera-table {
+  width: 100%;
+  border-collapse: separate !important;
+  border-spacing: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.camera-table thead {
+  background-color: #e2e8f0;
+  font-weight: bold;
+}
+
+.camera-table td,
+.camera-table th {
+  padding: 12px 16px;
+  vertical-align: middle;
+  border: none !important;
+}
+
+/* Alternate row colors */
+.camera-table tbody tr:nth-child(odd) {
+  background-color: #f8fafc;
+}
+
+.camera-table tbody tr:nth-child(even) {
+  background-color: #e2e8f0;
+}
+
+/* Initial circle for branding (if used) */
+.initial-circle {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button styles */
+.add-camera-btn {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  border: none;
+  border-radius: 8px;
+}
+/* Enhanced lock icon */
+.lock-icon {   
+  color: #3b82f6;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(29, 78, 216, 0.3));
+}
+.add-camera-btn:hover {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+}
+.camera-scroll {
+  max-width: 200px;
+  white-space: nowrap;
+  overflow-x: auto;
+  padding: 2px;
+}
+
+.camera-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.initial-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+
+.camera-scroll::-webkit-scrollbar-thumb {
+  background-color: #aaa;
+  border-radius: 10px;
+}
+
+/* Action buttons */
+.action-btn {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #475569;
+}
+
+.action-btn:hover {
+  background-color: #1e293b;
+}
+
+/* Eye icon */
+.password-toggle {
+  cursor: pointer;
+  margin-left: -30px;
+  position: relative;
+  z-index: 2;
+}
