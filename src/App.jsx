@@ -14,7 +14,7 @@ import SingleRoiDetails from './components/SingleRoiDetails';
 import Accepted from './components/Accepted';
 import Rejected from './components/Rejected';
 import SingleReject from './components/SingleReject';
-import SingleAccept from './components/singleAccept';
+import SingleAccept from './components/SingleAccept';
 import NprDetection from './components/NprDetection';
 import NprViolations from './components/NprViolations';
 import NprNonViolations from './components/NprNonViolations';
