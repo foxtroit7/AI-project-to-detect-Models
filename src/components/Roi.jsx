@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../css/Roi.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { FaCar, FaWalking, FaCogs } from "react-icons/fa";
+import { FaCar, FaWalking } from "react-icons/fa";
 import { BsFillSave2Fill } from "react-icons/bs";
 import { MdHealthAndSafety, MdOutlineSmokeFree, MdEmojiTransportation, MdEmojiObjects } from "react-icons/md";
 import { IoMdSpeedometer } from "react-icons/io";
@@ -10,16 +10,16 @@ const Roi = () => {
   const cameras = ["Camera 1", "Camera 2", "Camera 3"];
   const tabs = [
     "PPE Kit Detection",
-    "Vehicle Detection (Non Parking)",
-    "Pedestrian Detection",
-    "Smoke and Fire Detection",
+    "Vehicle Detection (Non Parking Zone)",
+    "Pedestrian Detection (Non Parking Zone)",
+    "Smoke & Fire Detection",
     "Speed Violation Detection",
     "Number Plate Recognition",
     "Object Detection",
   ];
 
   const [selectedCamera, setSelectedCamera] = useState("");
-  const [activeTab, setActiveTab] = useState(tabs[0]);
+  const [activeTab, setActiveTab] = useState("");
   const [ppeItems, setPpeItems] = useState([]);
   const [speedLimit, setSpeedLimit] = useState("");
   const [startDateTime, setStartDateTime] = useState("");
@@ -53,13 +53,13 @@ const Roi = () => {
 
   const getTabIcon = (tab) => {
     switch (tab.toLowerCase()) {
-      case "vehicle detection (non parking)":
+      case "vehicle detection (Non Parking Zone)":
         return <FaCar className="me-2" style={{ fontSize: "1.5rem" }} />;
       case "ppe kit detection":
         return <MdHealthAndSafety className="me-2" style={{ fontSize: "1.5rem" }} />;
-      case "pedestrian detection":
+      case "pedestrian detection (Non Parking Zone)":
         return <FaWalking className="me-2" style={{ fontSize: "1.5rem" }} />;
-      case "smoke and fire detection":
+      case "smoke & fire detection":
         return <MdOutlineSmokeFree className="me-2" style={{ fontSize: "1.5rem" }} />;
       case "number plate recognition":
         return <MdEmojiTransportation className="me-2" style={{ fontSize: "1.5rem" }} />;
@@ -80,7 +80,10 @@ const Roi = () => {
         <select
           className="form-select bg-dark text-light"
           value={selectedCamera}
-          onChange={(e) => setSelectedCamera(e.target.value)}
+          onChange={(e) => {
+            setSelectedCamera(e.target.value);
+            setActiveTab(""); // Reset tab when camera changes
+          }}
           style={{ backgroundColor: "#36393f", color: "white" }}
         >
           <option value="" style={{ backgroundColor: "#36393f", color: "white" }}>
@@ -98,23 +101,26 @@ const Roi = () => {
         </select>
       </div>
 
-      {/* Tabs for Detection Type */}
-      <ul className="nav custom-tab nav-tabs mb-3 justify-content-center">
-        {tabs.map((tab, i) => (
-          <li className="nav-item mb-2" key={i}>
-            <button
-              className={`nav-link ${activeTab === tab ? "active" : ""}`}
-              onClick={() => setActiveTab(tab)}
-            >
-              {getTabIcon(tab)} {tab}
-            </button>
-          </li>
-        ))}
-      </ul>
+{/* Tabs for Detection Type */}
+{selectedCamera && (
+  <ul className="nav custom-tab nav-tabs mb-3 justify-content-center">
+    {tabs.map((tab, i) => (
+      <li className="nav-item mb-2 mt-3" key={i}>
+        <button
+          className={`nav-link ${activeTab === tab ? "active" : ""}`}
+          onClick={() => setActiveTab(tab)}
+        >
+          {getTabIcon(tab)} {tab}
+        </button>
+      </li>
+    ))}
+  </ul>
+)}
 
-     {/* Conditional Input Section */}
+
+      {/* Conditional Input Section */}
       {activeTab === "PPE Kit Detection" && (
-        <div className="bg-dark text-light p-3 rounded mt-4">
+        <div className="bg-dark text-light p-3 rounded mt-4 mb-4">
           <h5>Select PPE Items:</h5>
           {["Helmet", "Jacket", "Shoes"].map((item) => (
             <div className="form-check" key={item}>
@@ -189,8 +195,8 @@ const Roi = () => {
           </div>
         </div>
       )}
-   
-        {/* ROI Image Display */}
+
+      {/* ROI Image Display */}
       <div className="roi-image-container">
         <img
           src={getImageSrc()}
@@ -198,16 +204,17 @@ const Roi = () => {
           className="roi-image"
         />
       </div>
-         {/* Save Button for Overall ROI */}
+
+      {/* Save Button for Overall ROI */}
       <div className="text-end mt-4">
         <button
           className="btn btn-primary px-4 py-2 fw-semibold shadow-sm"
           onClick={handleSave}
+          disabled={!activeTab || !selectedCamera}
         >
           <BsFillSave2Fill /> Save ROI
         </button>
       </div>
-
     </div>
   );
 };

@@ -25,7 +25,6 @@
   background: none;
   cursor: pointer;
   font-weight: 500;
-  transition: background 0.3s;
 }
 
 .sidebar-header {
@@ -91,9 +90,6 @@ color: linear-gradient(135deg, #3b82f6, #1d4ed8);
   transition: background-color 0.3s;
 }
 
-.sidebar-title-link:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-}
 
 .sidebar-title-link.centered {
   justify-content: center;
@@ -108,6 +104,7 @@ color: linear-gradient(135deg, #3b82f6, #1d4ed8);
 .link-label {
   margin-left: 12px;
   font-size: 14px;
+  text-decoration: none !important;
 }
 
 .sidebar-title-link.active {
@@ -143,5 +140,18 @@ color: linear-gradient(135deg, #3b82f6, #1d4ed8);
   font-weight: 500;
   color: linear-gradient(135deg, #3b82f6, #1d4ed8) !important;
    font-size: 17px;
+}
+.sidebar-sub-link {
+  display: block;
+  padding: 6px 0 6px 10px;
+  font-size: 14px;
+  color: #ccc;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.sidebar-sub-link.active {
+  font-weight: bold;
+  color: #fff;
 }
 
